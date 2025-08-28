@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pixelate/pixelate.dart';
+import 'package:flutter_pixelate/flutter_pixelate.dart';
 
 void main() {
   runApp(const PixelateExampleApp());

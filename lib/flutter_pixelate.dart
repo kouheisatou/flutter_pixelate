@@ -1,8 +1,8 @@
-/// Pixelate - A Flutter plugin for retro LCD pixel effects
+/// Flutter Pixelate - A Flutter plugin for retro pixel effects
 /// 
 /// This plugin provides easy-to-use widgets for creating nostalgic pixel effects
-/// reminiscent of old LCD displays from the 1980s-1990s.
-library pixelate;
+/// reminiscent of classic arcade games.
+library flutter_pixelate;
 
 export 'src/pixelate_effect.dart';
 export 'src/pixelate_widget.dart';

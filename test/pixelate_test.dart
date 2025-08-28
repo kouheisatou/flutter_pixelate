@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pixelate/pixelate.dart';
-import 'package:pixelate/pixelate_platform_interface.dart';
-import 'package:pixelate/pixelate_method_channel.dart';
+import 'package:flutter_pixelate/flutter_pixelate.dart';
+import 'package:flutter_pixelate/pixelate_platform_interface.dart';
+import 'package:flutter_pixelate/pixelate_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockPixelatePlatform

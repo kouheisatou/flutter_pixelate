@@ -1,4 +1,4 @@
-# Pixelate
+# flutter_pixelate
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
@@ -30,7 +30,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  pixelate:
+  flutter_pixelate:
     git:
       url: https://github.com/kouheisatou/flutter_pixelate.git
 ```
@@ -39,7 +39,7 @@ Or if published to pub.dev:
 
 ```yaml
 dependencies:
-  pixelate: ^1.0.0
+  flutter_pixelate: ^1.0.0
 ```
 
 ## 🚀 Usage
@@ -49,7 +49,7 @@ dependencies:
 Wrap any widget with `PixelateWidget`:
 
 ```dart
-import 'package:pixelate/pixelate.dart';
+import 'package:flutter_pixelate/flutter_pixelate.dart';
 
 PixelateWidget(
   blockSize: 6.0,

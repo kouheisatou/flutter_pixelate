@@ -1,4 +1,4 @@
-name: pixelate
+name: flutter_pixelate
 description: A simple Flutter plugin that provides retro pixel effects with customizable block size. Perfect for creating nostalgic gaming experiences.
 version: 1.0.0
 homepage: https://github.com/kouheisatou/flutter_pixelate
