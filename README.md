@@ -7,7 +7,7 @@ A simple Flutter plugin that provides retro pixel effects with customizable bloc
 
 ## 🚀 Live Demo
 
-**[Try the interactive demo here!](https://kouheisatou.github.io/pixelate_plugin/)**
+**[Try the interactive demo here!](https://kouheisatou.github.io/flutter_pixelate/)**
 
 Experience the pixelation effects in your browser with real-time controls.
 
