@@ -11,12 +11,13 @@ class PixelateExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Pixelate Example',
+      title: 'Flutter Pixelate Plugin Demo',
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: Colors.deepPurple,
       ),
       home: const PixelateExampleHome(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -35,7 +36,11 @@ class _PixelateExampleHomeState extends State<PixelateExampleHome> {
   Widget build(BuildContext context) {
     // Demo content to show the effect
     final content = Scaffold(
-      appBar: AppBar(title: const Text('Pixelate Plugin Demo')),
+      appBar: AppBar(
+        title: const Text('Flutter Pixelate Plugin Demo'),
+        centerTitle: true,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [

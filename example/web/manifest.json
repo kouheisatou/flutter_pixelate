@@ -1,11 +1,11 @@
 {
-    "name": "pixcellate_example",
-    "short_name": "pixcellate_example",
+    "name": "Flutter Pixelate Plugin Demo",
+    "short_name": "Pixelate Demo",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "Demonstrates how to use the pixcellate plugin.",
+    "background_color": "#673AB7",
+    "theme_color": "#673AB7",
+    "description": "Experience retro pixel effects with the Flutter Pixelate Plugin. Customize block sizes and see real-time performance.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
