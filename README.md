@@ -5,7 +5,10 @@
 
 A simple Flutter plugin that provides retro pixel effects with customizable block size. Perfect for creating nostalgic gaming experiences reminiscent of classic arcade games.
 
-## ✨ Features
+## Features
+
+![alt text](docs/demo-1.gif)
+![alt text](docs/demo-2.gif)
 
 - **Real-time Pixelation**: Apply pixelation effects to any Flutter widget
 - **Customizable Block Size**: Control the pixel size with a simple parameter
@@ -13,7 +16,7 @@ A simple Flutter plugin that provides retro pixel effects with customizable bloc
 - **Easy Integration**: Simple widget-based API
 - **Preset Effects**: Built-in presets for different retro styles
 
-## 🎮 Visual Examples
+## Visual Examples
 
 Transform any Flutter UI into a retro gaming experience:
 
@@ -24,7 +27,7 @@ Transform any Flutter UI into a retro gaming experience:
 - **Retro** (blockSize: 12.0) - Classic gaming console look  
 - **Vintage** (blockSize: 20.0) - Extreme pixelation for artistic effect
 
-## 📦 Installation
+## Installation
 
 Add this to your package's `pubspec.yaml` file:
 
@@ -33,13 +36,6 @@ dependencies:
   flutter_pixelate:
     git:
       url: https://github.com/kouheisatou/flutter_pixelate.git
-```
-
-Or if published to pub.dev:
-
-```yaml
-dependencies:
-  flutter_pixelate: ^1.0.0
 ```
 
 ## 🚀 Usage
@@ -124,24 +120,16 @@ class _MyPixelatedAppState extends State<MyPixelatedApp> {
 }
 ```
 
-## 🛠️ Requirements
+## Requirements
 
 - Flutter 3.3.0+
 - Dart 3.8.1+
 - `flutter_shaders` ^0.1.3
 
-## 🎨 Technical Details
+## Technical Details
 
 This plugin uses Fragment Shaders from the `flutter_shaders` package to achieve high-performance real-time pixelation effects. The shader samples the widget tree as a texture and applies pixelation with optional grid overlay.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-**Made with ❤️ for Flutter developers and retro gaming enthusiasts**
