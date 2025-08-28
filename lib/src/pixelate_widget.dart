@@ -13,14 +13,10 @@ class PixelateWidget extends StatelessWidget {
   /// 
   /// [child] is the widget to apply the effect to
   /// [blockSize] controls the pixel size (larger = more pixelated)
-  /// [showGrid] enables/disables the LCD grid overlay
-  /// [gridOpacity] controls the opacity of the grid lines (0.0 to 1.0)
   const PixelateWidget({
     super.key,
     required this.child,
     this.blockSize = 6.0,
-    this.showGrid = true,
-    this.gridOpacity = 0.06,
   });
 
   /// The child widget to apply the pixel effect to
@@ -28,14 +24,8 @@ class PixelateWidget extends StatelessWidget {
 
   /// The size of each pixel block (larger = more pixelated)
   /// 
-  /// Recommended range: 2.0 to 20.0
+  /// Recommended range: 0.5 to 20.0
   final double blockSize;
-
-  /// Whether to show the LCD grid overlay
-  final bool showGrid;
-
-  /// The opacity of the grid lines (0.0 = transparent, 1.0 = opaque)
-  final double gridOpacity;
 
   @override
   Widget build(BuildContext context) {
@@ -62,25 +52,6 @@ class PixelateWidget extends StatelessWidget {
 
                 // Draw shader across entire screen (pixelates the background)
                 canvas.drawRect(Offset.zero & s, Paint()..shader = shader);
-
-                // Optional: LCD-style grid overlay
-                if (showGrid) {
-                  final gridPaint = Paint()
-                    ..color = Colors.black.withOpacity(gridOpacity)
-                    ..strokeWidth = 1;
-
-                  final cellW = s.width / px;
-                  final cellH = s.height / py;
-
-                  // Vertical lines
-                  for (double x = 0; x <= s.width; x += cellW) {
-                    canvas.drawLine(Offset(x, 0), Offset(x, s.height), gridPaint);
-                  }
-                  // Horizontal lines
-                  for (double y = 0; y <= s.height; y += cellH) {
-                    canvas.drawLine(Offset(0, y), Offset(s.width, y), gridPaint);
-                  }
-                }
               },
               child: child!,
             );

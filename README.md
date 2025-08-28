@@ -3,13 +3,12 @@
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
-A Flutter plugin that provides retro LCD pixel effects with customizable block size and grid overlay. Perfect for creating nostalgic gaming experiences reminiscent of 1980s-1990s displays.
+A simple Flutter plugin that provides retro pixel effects with customizable block size. Perfect for creating nostalgic gaming experiences reminiscent of classic arcade games.
 
 ## ✨ Features
 
 - **Real-time Pixelation**: Apply pixelation effects to any Flutter widget
 - **Customizable Block Size**: Control the pixel size with a simple parameter
-- **LCD Grid Overlay**: Optional grid lines for authentic LCD display feel
 - **Performance Optimized**: Uses Fragment Shaders for 60fps smooth effects
 - **Easy Integration**: Simple widget-based API
 - **Preset Effects**: Built-in presets for different retro styles
@@ -18,6 +17,8 @@ A Flutter plugin that provides retro LCD pixel effects with customizable block s
 
 Transform any Flutter UI into a retro gaming experience:
 
+- **Ultra Fine** (blockSize: 0.5) - Ultra-detailed pixelation
+- **Fine** (blockSize: 1.0) - Fine pixelation for subtle effects
 - **Smooth** (blockSize: 3.0) - Subtle pixelation
 - **Medium** (blockSize: 6.0) - Balanced retro feel
 - **Retro** (blockSize: 12.0) - Classic gaming console look  
@@ -26,6 +27,15 @@ Transform any Flutter UI into a retro gaming experience:
 ## 📦 Installation
 
 Add this to your package's `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  pixelate:
+    git:
+      url: https://github.com/kouheisatou/flutter_pixelate.git
+```
+
+Or if published to pub.dev:
 
 ```yaml
 dependencies:
@@ -43,7 +53,6 @@ import 'package:pixelate/pixelate.dart';
 
 PixelateWidget(
   blockSize: 6.0,
-  showGrid: true,
   child: YourWidget(),
 )
 ```
@@ -64,9 +73,6 @@ PixelateContainer(
 ```dart
 const customEffect = PixelateEffect(
   blockSize: 8.0,
-  showGrid: true,
-  gridOpacity: 0.08,
-  gridColor: Colors.black,
   enabled: true,
 );
 

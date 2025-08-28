@@ -25,8 +25,6 @@ class PixelateContainer extends StatelessWidget {
 
     return PixelateWidget(
       blockSize: effect.blockSize,
-      showGrid: effect.showGrid,
-      gridOpacity: effect.gridOpacity,
       child: child,
     );
   }
@@ -40,7 +38,7 @@ class PixelateControls extends StatelessWidget {
     required this.effect,
     required this.onEffectChanged,
     this.showTitle = true,
-    this.minBlockSize = 2.0,
+    this.minBlockSize = 0.5,
     this.maxBlockSize = 20.0,
   });
 
@@ -81,44 +79,23 @@ class PixelateControls extends StatelessWidget {
                 min: minBlockSize,
                 max: maxBlockSize,
                 value: effect.blockSize,
+                divisions: ((maxBlockSize - minBlockSize) * 10).round(),
                 onChanged: (value) {
                   onEffectChanged(effect.copyWith(blockSize: value));
                 },
               ),
             ),
-            Text('${effect.blockSize.toStringAsFixed(0)}'),
+            SizedBox(
+              width: 40,
+              child: Text(
+                effect.blockSize < 10 
+                  ? effect.blockSize.toStringAsFixed(1)
+                  : effect.blockSize.toStringAsFixed(0),
+                textAlign: TextAlign.center,
+              ),
+            ),
           ],
         ),
-        
-        // Grid Toggle
-        SwitchListTile(
-          title: const Text('LCD Grid'),
-          subtitle: const Text('Show retro LCD grid lines'),
-          value: effect.showGrid,
-          onChanged: (value) {
-            onEffectChanged(effect.copyWith(showGrid: value));
-          },
-          contentPadding: EdgeInsets.zero,
-        ),
-        
-        // Grid Opacity Slider (only when grid is enabled)
-        if (effect.showGrid)
-          Row(
-            children: [
-              const Text('Grid Opacity'),
-              Expanded(
-                child: Slider(
-                  min: 0.0,
-                  max: 0.2,
-                  value: effect.gridOpacity,
-                  onChanged: (value) {
-                    onEffectChanged(effect.copyWith(gridOpacity: value));
-                  },
-                ),
-              ),
-              Text('${(effect.gridOpacity * 100).toStringAsFixed(0)}%'),
-            ],
-          ),
         
         // Preset Buttons
         const SizedBox(height: 8),
@@ -127,6 +104,18 @@ class PixelateControls extends StatelessWidget {
         Wrap(
           spacing: 8,
           children: [
+            _PresetButton(
+              label: 'Ultra Fine',
+              effect: PixelateEffect.ultraFine,
+              currentEffect: effect,
+              onPressed: onEffectChanged,
+            ),
+            _PresetButton(
+              label: 'Fine',
+              effect: PixelateEffect.fine,
+              currentEffect: effect,
+              onPressed: onEffectChanged,
+            ),
             _PresetButton(
               label: 'Smooth',
               effect: PixelateEffect.smooth,
