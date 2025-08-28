@@ -6,7 +6,7 @@ repository: https://github.com/kouheisatou/flutter_pixelate.git
 issue_tracker: https://github.com/kouheisatou/flutter_pixelate/issues
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.5.0
   flutter: '>=3.3.0'
 
 dependencies:

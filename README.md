@@ -5,7 +5,7 @@
 
 A simple Flutter plugin that provides retro pixel effects with customizable block size. Perfect for creating nostalgic gaming experiences reminiscent of classic arcade games.
 
-## 🚀 Live Demo
+## Live Demo
 
 **[Try the interactive demo here!](https://kouheisatou.github.io/flutter_pixelate/)**
 
@@ -44,7 +44,7 @@ dependencies:
       url: https://github.com/kouheisatou/flutter_pixelate.git
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Basic Usage
 
